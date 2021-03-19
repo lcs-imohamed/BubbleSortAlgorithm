@@ -27,14 +27,21 @@ print(dataSet)
 waitForInput()
 
 //Sort the array
+var sorted = 0
 
 //Loop through the array "n"
 
+
+
+
 //(however many times there are elements in the array)
-for i in 0..<dataSet.count {
+for i in 0..<dataSet.count - sorted - 1 {
     
     // One pass through the array to float the highest number to the end
     for j in 0..<dataSet.count - 1 {
+        
+        //What comparison is this?
+        print("Pass\(i + 1), comparison\(j + 1)...")
 
         //compare the left value to the right value
         if dataSet[j] > dataSet[j + 1] {
@@ -47,8 +54,11 @@ for i in 0..<dataSet.count {
         }
         
     }
+    
+    sorted += 1
+    
     //Print the array after "n" passes
-    print("Array after pass")
+    print("Array after pass\(i + 1)")
     print(dataSet)
     waitForInput()
 
